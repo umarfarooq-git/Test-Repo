@@ -73,3 +73,36 @@ for item in input_items: #Loopto to iterate through list of items.
         num_price+=iterator
     num_price=float(num_price)
     
+     #List of words items containing that are exempted of 10 percent tax 
+    basictax_examption=['book','books','chocolates','chocolate','headache','pills','food','medical'] 
+    for word in basictax_examption:
+        if word in item:
+            deduct='no'
+            break
+    if deduct is 'yes':
+        basictax_amount=basic_salestax(num_price)
+        temp=basictax_amount * int(numberofitems(item))
+        sale_tax+=temp
+    
+    if 'imported'in item:
+        importedtax_amount=importduty_salestax(num_price)
+        temp=importedtax_amount * int(numberofitems(item))
+        sale_tax+=temp
+
+
+
+    num_price=num_price+basictax_amount+importedtax_amount
+
+    num_price=num_price * int(numberofitems(item))
+    num_price=round(num_price,2)
+    total_price+=num_price
+    num_price=str(num_price)    
+    out = item.split(' at ')[0]
+    out=out[:-1]+': '+num_price
+    print(out)
+    price=[]
+
+sale_tax=round(sale_tax,2)
+print('sales tax:',sale_tax)
+total_price=round(total_price,2)
+print('Total:',total_price)
