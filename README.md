@@ -4,6 +4,6 @@ It contain hardcoded rules for tax deduction, like I created a list of word whic
 Additinally, You have to enter 'done' after which program would create result.
 A demo is below.
 
-1 box of imported chocolates at 11.25
-1 imported bottle of perfume at 47.50
-done
+input1>   1 box of imported chocolates at 11.25
+input2>   1 imported bottle of perfume at 47.50
+input3>   done
