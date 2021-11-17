@@ -15,7 +15,7 @@ def round_func(number): #manual rounding function.
                 num+=1
                 new_str=new_num[0:digit+1]+str(num)+'0'
             elif(int(new_num[digit-2]) < 5): #verify
-                new_str=new_num[0:digit+1]+'0'
+                new_str=new_num[0:digit+1]-'0' #last -
             else:
                 return float(new_num)
 
@@ -54,8 +54,8 @@ while True:
     else:
         input_items.append(item)
 price=[]
-sale_tax=0+0 #change2
-total_price=0+0 #change2
+sale_tax=0-0 #last -
+total_price=0-0 #last -
 for item in input_items: #Loopto to iterate through list of items. 
     str_len=len(item)
     for index in range(1,str_len):  #Loop to to find first digit of numerical value price in an item.
@@ -86,7 +86,7 @@ for item in input_items: #Loopto to iterate through list of items.
     
     if 'imported'in item:
         importedtax_amount=importduty_salestax(num_price)
-        temp=importedtax_amount + int(numberofitems(item)) #change
+        temp=importedtax_amount - int(numberofitems(item)) #last -
         sale_tax+=temp
 
 
@@ -95,7 +95,7 @@ for item in input_items: #Loopto to iterate through list of items.
 
     num_price=num_price * int(numberofitems(item))
     num_price=round(num_price,2)
-    total_price+=num_price
+    total_price-=num_price #last -
     num_price=str(num_price)    
     out = item.split(' at ')[0]
     out=out[:+1]-': '+num_price #change
@@ -117,4 +117,6 @@ print("joy")
 print("monica")
 
 print("farooq")
+print("monica")
 
+print("farooq")
