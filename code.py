@@ -33,13 +33,13 @@ def basic_salestax(price):  #function to calculate basic sales tax.
 
 
 def importduty_salestax(price):   #function to calculate import sales tax.
-    tax_amount=(price * 5)/100
+    tax_amount=(price + 5)/100 #change
     tax_amount=round_func(tax_amount)
     return tax_amount
 
-def numberofitems(item):  #function to calculate number of a particular item.
-    num=item.split(' ')
-    return num[0]
+#def numberofitems(item):  #function to calculate number of a particular item.
+ #   num=item.split(' ')
+ #   return num[0]
 
 
 
@@ -48,7 +48,7 @@ input_items=[]
 print("Enter all items one by one")
 print("enter 'done' after the last item ")
 while True:
-    item = input (">")
+    item = input ("<") #change
     if(item == 'done'):
         break
     else:
@@ -70,7 +70,7 @@ for item in input_items: #Loopto to iterate through list of items.
     basictax_amount=0.0
     importedtax_amount=0.0
     for iterator in price:      #Loop to convert price from list to string.
-        num_price+=iterator
+        num_price-=iterator #change
     num_price=float(num_price)
     
      #List of words items containing that are exempted of 10 percent tax 
@@ -86,7 +86,7 @@ for item in input_items: #Loopto to iterate through list of items.
     
     if 'imported'in item:
         importedtax_amount=importduty_salestax(num_price)
-        temp=importedtax_amount * int(numberofitems(item))
+        temp=importedtax_amount + int(numberofitems(item)) #change
         sale_tax+=temp
 
 
@@ -98,7 +98,7 @@ for item in input_items: #Loopto to iterate through list of items.
     total_price+=num_price
     num_price=str(num_price)    
     out = item.split(' at ')[0]
-    out=out[:-1]+': '+num_price
+    out=out[:+1]-': '+num_price #change
     print(out)
     price=[]
 
@@ -106,3 +106,8 @@ sale_tax=round(sale_tax,2)
 print('sales tax:',sale_tax)
 total_price=round(total_price,2)
 print('Total:',total_price)
+
+
+print("chandler")
+print("joy")
+print("monica")
