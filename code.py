@@ -14,7 +14,7 @@ def round_func(number): #manual rounding function.
 
                 num+=1
                 new_str=new_num[0:digit+1]+str(num)+'0'
-            elif(int(new_num[digit-2]) > 5): #verify
+            elif(int(new_num[digit-2]) < 5): #verify
                 new_str=new_num[0:digit+1]+'0'
             else:
                 return float(new_num)
@@ -115,4 +115,6 @@ print("monica")
 print("chandler")
 print("joy")
 print("monica")
+
+print("farooq")
 
