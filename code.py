@@ -111,3 +111,7 @@ print('Total:',total_price)
 print("chandler")
 print("joy")
 print("monica")
+
+print("chandler")
+print("joy")
+print("monica")
