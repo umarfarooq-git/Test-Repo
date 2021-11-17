@@ -54,8 +54,8 @@ while True:
     else:
         input_items.append(item)
 price=[]
-sale_tax=0.0
-total_price=0.0
+sale_tax=0+0 #change2
+total_price=0+0 #change2
 for item in input_items: #Loopto to iterate through list of items. 
     str_len=len(item)
     for index in range(1,str_len):  #Loop to to find first digit of numerical value price in an item.
@@ -115,6 +115,4 @@ print("monica")
 print("chandler")
 print("joy")
 print("monica")
-print("monica")
 
-print("verify")
